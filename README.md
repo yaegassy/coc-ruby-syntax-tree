@@ -34,17 +34,17 @@ Plug 'yaegassy/coc-ruby-syntax-tree', {'do': 'yarn install --frozen-lockfile'}
 
 ---
 
-**inlayHint(Vim9)**:
+### inlayHint(Vim9)
 
 <img width="134" alt="coc-ruby-syntax-tree-inlayhints-vim9" src="https://user-images.githubusercontent.com/188642/200488838-e3e83a87-80c8-4669-b32e-6878afca14c3.png">
 
-**inlayHint(Neovim)**:
+### inlayHint(Neovim)
 
 <img width="118" alt="coc-ruby-syntax-tree-inlayhints-neovim" src="https://user-images.githubusercontent.com/188642/200488866-b31d4cf4-1746-4235-8ff3-5fe6ce50e7dd.png">
 
-**syntaxTree/visualizing**:
+### syntaxTree/visualizing
 
-...
+<img width="791" alt="coc-ruby-syntax-tree-visualize" src="https://user-images.githubusercontent.com/188642/200498204-094026a9-aa54-4009-93cc-af81c933382a.png">
 
 ## Configuration options
 
