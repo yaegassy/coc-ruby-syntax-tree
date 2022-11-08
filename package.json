@@ -47,6 +47,7 @@
     "onCommand:syntaxTree.start",
     "onCommand:syntaxTree.stop",
     "onCommand:syntaxTree.restart",
+    "onCommand:syntaxTree.visualize",
     "onCommand:syntaxTree.showOutputChannel"
   ],
   "contributes": {
@@ -109,6 +110,10 @@
       {
         "command": "syntaxTree.showOutputChannel",
         "title": "Syntax Tree: Show Output Channel"
+      },
+      {
+        "command": "syntaxTree.visualize",
+        "title": "Syntax Tree: Visualize"
       }
     ]
   },

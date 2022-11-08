@@ -6,6 +6,8 @@ import * as os from 'os';
 import * as path from 'path';
 import { promisify } from 'util';
 
+import * as visualize from './features/visualize';
+
 const promiseExec = promisify(exec);
 
 let languageClient: LanguageClient | null = null;
@@ -172,6 +174,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
     await stopLanguageServer();
     await startLanguageServer();
   }
+
+  visualize.register(context, languageClient);
 }
 
 export async function deactivate() {
