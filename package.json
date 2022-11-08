@@ -1,0 +1,116 @@
+{
+  "name": "coc-ruby-syntax-tree",
+  "version": "0.0.1",
+  "description": "coc.nvim support for the syntax_tree gem",
+  "author": "yaegassy <yosstools@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim"
+  ],
+  "engines": {
+    "coc": "^0.0.80"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaegassy/coc-ruby-syntax-tree"
+  },
+  "scripts": {
+    "lint": "eslint src --ext ts",
+    "clean": "rimraf lib",
+    "watch": "node esbuild.js --watch",
+    "build": "node esbuild.js",
+    "prepare": "node esbuild.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "semi": true
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.3",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "coc.nvim": "^0.0.82",
+    "esbuild": "^0.15.13",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4"
+  },
+  "activationEvents": [
+    "onLanguage:haml",
+    "onLanguage:ruby",
+    "workspaceContains:Gemfile.lock",
+    "onCommand:syntaxTree.start",
+    "onCommand:syntaxTree.stop",
+    "onCommand:syntaxTree.restart",
+    "onCommand:syntaxTree.showOutputChannel"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "coc-ruby-syntax-tree configuration",
+      "properties": {
+        "syntaxTree.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable coc-ruby-syntax-tree extension"
+        },
+        "syntaxTree.advanced.commandPath": {
+          "default": "",
+          "markdownDescription": "Absolute path to stree executable. Overrides default search order.",
+          "type": "string"
+        },
+        "syntaxTree.additionalPlugins": {
+          "default": [],
+          "markdownDescription": "Registers [extra behaviors](https://github.com/ruby-syntax-tree/syntax_tree#plugins) with the language server.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "syntaxTree.ignoreFiles": {
+          "default": "",
+          "markdownDescription": "A glob pattern of files to ignore for formatting.",
+          "type": "string"
+        },
+        "syntaxTree.printWidth": {
+          "markdownDescription": "The width to be used when formatting code.",
+          "type": "number"
+        },
+        "syntaxTree.singleQuotes": {
+          "default": false,
+          "markdownDescription": "Uses single-quoted strings when possible.",
+          "type": "boolean"
+        },
+        "syntaxTree.trailingComma": {
+          "default": false,
+          "markdownDescription": "Adds a trailing comma to multi-line array literals, hash literals, and method parameters.",
+          "type": "boolean"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "syntaxTree.start",
+        "title": "Syntax Tree: Start"
+      },
+      {
+        "command": "syntaxTree.stop",
+        "title": "Syntax Tree: Stop"
+      },
+      {
+        "command": "syntaxTree.restart",
+        "title": "Syntax Tree: Restart"
+      },
+      {
+        "command": "syntaxTree.showOutputChannel",
+        "title": "Syntax Tree: Show Output Channel"
+      }
+    ]
+  },
+  "dependencies": {}
+}
