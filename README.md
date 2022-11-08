@@ -22,6 +22,10 @@ You need to have [coc.nvim](https://github.com/neoclide/coc.nvim) installed for 
 Plug 'yaegassy/coc-ruby-syntax-tree', {'do': 'yarn install --frozen-lockfile'}
 ```
 
+## Usage
+
+`syntax_tree` (`stree`) must be installed in the project or installed globally. Alternatively, you can also set the `stree` executable path in the `syntaxTree.advanced.commandPath` settings.
+
 ## Configuration options
 
 - `syntaxTree.enable`: Enable coc-ruby-syntax-tree extension, default: `true`
