@@ -13,6 +13,8 @@ const promiseExec = promisify(exec);
 let languageClient: LanguageClient | null = null;
 
 export async function activate(context: ExtensionContext): Promise<void> {
+  if (!workspace.getConfiguration('syntaxTree').get('enable', true)) return;
+
   const outputChannel = window.createOutputChannel('Syntax Tree');
 
   context.subscriptions.push(
