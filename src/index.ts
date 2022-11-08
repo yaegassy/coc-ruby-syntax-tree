@@ -177,7 +177,9 @@ export async function activate(context: ExtensionContext): Promise<void> {
     await startLanguageServer();
   }
 
-  visualize.register(context, languageClient);
+  if (languageClient) {
+    visualize.register(context, languageClient);
+  }
 }
 
 export async function deactivate() {
