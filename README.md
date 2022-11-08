@@ -26,6 +26,19 @@ Plug 'yaegassy/coc-ruby-syntax-tree', {'do': 'yarn install --frozen-lockfile'}
 
 `syntax_tree` (`stree`) must be installed in the project or installed globally. Alternatively, you can also set the `stree` executable path in the `syntaxTree.advanced.commandPath` settings.
 
+## Features
+
+- formatting
+- inlayHint 
+
+**inlayHint(Vim9)**:
+
+<img width="134" alt="coc-ruby-syntax-tree-inlayhints-vim9" src="https://user-images.githubusercontent.com/188642/200488838-e3e83a87-80c8-4669-b32e-6878afca14c3.png">
+
+**inlayHint(Neovim)**:
+
+<img width="118" alt="coc-ruby-syntax-tree-inlayhints-neovim" src="https://user-images.githubusercontent.com/188642/200488866-b31d4cf4-1746-4235-8ff3-5fe6ce50e7dd.png">
+
 ## Configuration options
 
 - `syntaxTree.enable`: Enable coc-ruby-syntax-tree extension, default: `true`
