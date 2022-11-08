@@ -4,6 +4,10 @@
 
 [coc.nvim](https://github.com/neoclide/coc.nvim) support for the [syntax_tree](https://github.com/ruby-syntax-tree/syntax_tree) gem
 
+## DEMO
+
+https://user-images.githubusercontent.com/188642/200471161-d9785784-6154-4919-8b18-0427f0febe14.mp4
+
 ## **!!Note & Warning!!**
 
 I don't use ruby regularly, so if you like ruby, please refer to this repository and create `coc-ruby-syntax-tree` by yourself.
